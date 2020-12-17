@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import "./Chat.css"
 import socketIOClient from 'socket.io-client'
 import Card from 'react-bootstrap/Card'
 import InputGroup from 'react-bootstrap/InputGroup'
@@ -27,13 +28,14 @@ export default function Chat() {
   }
    
   return (
-    <div>
+    <div className="Chat">
       <Card style={{ width: '18rem' }}>
 
   <Card.Body>
-    <Card.Title>Borst Vooruit Chat</Card.Title>
-    <InputGroup className="mb-3">
+    <Card.Title className="Title">Borst Vooruit Chat</Card.Title>
+    <InputGroup >
     <FormControl
+      className="chatInput"
       placeholder="Type your message..."
       type="text"
       onChange={(event) => setNewMessage(event.target.value)}
@@ -44,7 +46,7 @@ export default function Chat() {
     <button className="chatButton" type="submit" onClick={submitForm}>Verzend</button>
   </Card.Body>
 {messages.map((message)=> {
-  return ( <div style={{border: "solid 1px grey", margin: "0.5rem"}} >
+  return ( <div className="chatText"  >
 
   <p>{message}</p>
   </div>)

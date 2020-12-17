@@ -4,3 +4,25 @@
   background-color: #191a20;
   padding-bottom: 3rem;
 }
+
+.Title {
+  color: white;
+}
+
+.chatButton {
+  color: "white";
+  border-radius: 0.5rem;
+  background-color: #246bdf;
+}
+
+.chatText {
+  border: solid 1px grey;
+  margin: 0.5rem;
+  background-color: white;
+}
+
+.chatInput {
+  margin: 1rem;
+  padding: 1rem;
+  min-width: 80%;
+}
