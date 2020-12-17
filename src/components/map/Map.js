@@ -5,12 +5,18 @@ import './Map.css';
 mapboxgl.accessToken =
   'pk.eyJ1IjoiZ21vYXdhZCIsImEiOiJja2lzcjRmamQwbmJoMnBzY2oycnpldzRuIn0.OWucPatEQEoNmhwRmqFXqg';
 
+navigator.geolocation.getCurrentPosition(function(position) {
+
+// Get the location coordinates
+let lat = position.coords.latitude;
+let lng = position.coords.longitude;
+
 const Map = () => {
   const mapContainerRef = useRef(null);
 
-  const [lng, setLng] = useState(5);
-  const [lat, setLat] = useState(34);
-  const [zoom, setZoom] = useState(1.5);
+  // const [lng, setLng] = useState(5);
+  // const [lat, setLat] = useState(34);
+  const [zoom, setZoom] = useState(3.5);
 
   // Initialize map when component mounts
   useEffect(() => {
