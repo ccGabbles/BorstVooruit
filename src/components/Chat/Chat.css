@@ -1,4 +1,6 @@
 .Chat {
+  color: "white";
   height: 20vh;
-  background-color: #191A20;
+  background-color: #191a20;
+  padding-bottom: 3rem;
 }

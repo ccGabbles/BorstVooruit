@@ -1,5 +1,5 @@
 import './App.css';
-import Map from './components/Map/Map.js';
+import Map from './components/map/Map.js';
 import Chat from './components/Chat/Chat.js';
 
 function App() {
