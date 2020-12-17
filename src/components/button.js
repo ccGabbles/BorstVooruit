@@ -1,7 +1,6 @@
 
 import React from 'react';
 import './Button.css';
-import { Link } from 'react-router-dom';
 
 const STYLES = ['btn--primary'];
 
@@ -19,7 +18,7 @@ export const Button = ({
 
 
   return (
-    <Link to='#' className='btn-mobile'>
+    <a to='#' className='btn-mobile'>
       <button
         className={`btn ${checkButtonStyle}`}
         onClick={onClick}
@@ -27,6 +26,6 @@ export const Button = ({
       >
         {children}
       </button>
-    </Link>
+    </a>
   );
 };

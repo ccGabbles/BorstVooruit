@@ -1,18 +1,20 @@
 :root {
-    --primary: #fff;
+    --primary: #246BFD;
   }
   
   .btn {
-    padding: 8px 20px;
-    border-radius: 2px;
+    padding: 8px 50px;
+    border-radius: 200px;
     outline: none;
     border: none;
     cursor: pointer;
+    font-family: 'ubuntu','arial';
+    font-size: 1.3rem;
   }
   
   .btn--primary {
     background-color: var(--primary);
-    color: #242424;
+    color: #fff;
     border: 1px solid var(--primary);
   }
   
