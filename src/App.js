@@ -1,12 +1,11 @@
 import './App.css';
-import Map from './components/Map/Map.js';
-import Chat from './components/Chat/Chat.js';
+
+import ActivityPage from './components/ActivityPage/ActivityPage.js';
 
 function App() {
   return (
     <div className="App">
-      <Map />
-      <Chat />
+      <ActivityPage />
     </div>
   );
 }

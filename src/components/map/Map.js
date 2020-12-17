@@ -43,13 +43,12 @@ const Map = () => {
   return (
     <div>
       <div className="map-container" ref={mapContainerRef} />
-      
       {/* mocked own location - should be on the map too */}
       <img className="you-walking"
            src={window.location.origin + "/assets/youWalking.png"}
           alt="you Walking" />
       <img className="jeroen-walking"
-           src={window.location.origin + "/assets/jeroenWalking.png"}
+           src={window.location.origin + "/assets/jeroenWalking.gif"}
           alt="Jeroen Walking" />
     </div>
   );
