@@ -7,22 +7,28 @@ mapboxgl.accessToken =
 
 const Map = () => {
   const mapContainerRef = useRef(null);
-
+  
   const [lng, setLng] = useState(5);
   const [lat, setLat] = useState(34);
-  const [zoom, setZoom] = useState(1.5);
+  const [zoom, setZoom] = useState(15.5);
+
+  navigator.geolocation.getCurrentPosition(function(position) {
+    // Get the location coordinates
+    var lat = position.coords.latitude;
+    var lng = position.coords.longitude;
+    console.log(lat + "   " + lng);
+
+    // Works, but needs to be inserted in the map below
+  });
 
   // Initialize map when component mounts
   useEffect(() => {
     const map = new mapboxgl.Map({
       container: mapContainerRef.current,
       style: 'mapbox://styles/mapbox/streets-v11',
-      center: [lng, lat],
+      center: [5.101800, 52.073210],
       zoom: zoom
     });
-
-    // Add navigation control (the +/- zoom buttons)
-    map.addControl(new mapboxgl.NavigationControl(), 'top-right');
 
     map.on('move', () => {
       setLng(map.getCenter().lng.toFixed(4));
@@ -32,16 +38,18 @@ const Map = () => {
 
     // Clean up on unmount
     return () => map.remove();
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div>
-      <div className='sidebarStyle'>
-        <div>
-          Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
-        </div>
-      </div>
-      <div className='map-container' ref={mapContainerRef} />
+      <div className="map-container" ref={mapContainerRef} />
+      {/* mocked own location - should be on the map too */}
+      <img className="you-walking"
+           src={window.location.origin + "/assets/youWalking.png"}
+          alt="you Walking" />
+      <img className="jeroen-walking"
+           src={window.location.origin + "/assets/jeroenWalking.gif"}
+          alt="Jeroen Walking" />
     </div>
   );
 };
