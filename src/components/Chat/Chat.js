@@ -3,7 +3,7 @@ import socketIOClient from 'socket.io-client'
 import Card from 'react-bootstrap/Card'
 import InputGroup from 'react-bootstrap/InputGroup'
 import FormControl from 'react-bootstrap/FormControl'
-import { ENDPOINT } from '../constants'
+import { ENDPOINT } from '../../constants'
 
 export default function Chat() {
   const [newMessage, setNewMessage] = useState("")
