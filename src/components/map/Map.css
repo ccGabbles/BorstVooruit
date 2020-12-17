@@ -1,17 +1,17 @@
 .map-container {
-  height: 80vh;
+  height: calc(80vh - 20px);
   border: 10px solid #191A20;
 }
-  
-.sidebarStyle {
-  display: inline-block;
+
+.jeroen-walking {
   position: absolute;
-  top: 0;
-  left: 0;
-  margin: 12px;
-  background-color: #404040;
-  color: #ffffff;
-  z-index: 1 !important;
-  padding: 6px;
-  font-weight: bold;
+  top: 45px;
+  width: 25%;
+}
+
+.you-walking {
+  position: absolute;
+  top: calc(42.5% - 25px);
+  width: 15%;
+  left: calc(60% - 47.5px);
 }
